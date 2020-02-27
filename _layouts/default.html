@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    {% if page.layout == "home" %}
+    <header>
+      <div class="jumbotron jumbotron-fluid jumbotron--home">
+        <div class="container">
+          <h1 class="display-4">{{ page.title }}</h1>
+          <p class="lead">{{ site.description }}</p>
+          <p>
+            <a class="btn btn-lg btn-outline-light" href="https://github.com/formulajs/formulajs">View on Github</a>
+            <a class="btn btn-lg btn-outline-light" href="https://github.com/formulajs/formulajs/zipball/master">Download .zip</a>
+          </p>
+        </div>
+      </div>
+    </header>
+    {% endif %}
+
+    <div class="py-5">
+      <div class="container page-content">
+          {{ content }}
+      </div>
+    </div>
+
+    {%- include footer.html -%}
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+
+</html>

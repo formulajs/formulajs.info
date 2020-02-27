@@ -1,0 +1,21 @@
+.clickable {
+    cursor: pointer;
+}
+
+code.function-name {
+    color: #0088cc;
+}
+
+h2:not(:first-child) {
+    margin-top: 2rem;
+}
+
+h3:not(:first-child) {
+    margin-top: 1.5rem;
+}
+
+.jumbotron--home {
+    color: white;
+    background-color: #159957;
+    background-image: linear-gradient(120deg, #155799, #159957);
+}

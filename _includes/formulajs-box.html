@@ -1,0 +1,14 @@
+<div class="card position-sticky shadow p-3 mb-5 bg-white rounded" style="top: 10px">
+    <div class="card-body">
+        <form class="form-inline justify-content-around"
+              onsubmit="event.preventDefault();document.getElementById('out').value = eval(document.getElementById('in').value)">
+            <label class="sr-only" for="in">Formula</label>
+            <input type="text" class="form-control" id="in" placeholder="Type your formula">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <label class="sr-only" for="out">Username</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="out" placeholder="Result">
+            </div>
+        </form>
+    </div>
+</div>

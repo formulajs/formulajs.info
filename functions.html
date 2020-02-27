@@ -1,0 +1,50 @@
+---
+title: Functions
+permalink: /functions/
+layout: default
+navigation: main
+---
+{% include formulajs-box.html %}
+
+{% for category in site.data.functions %}
+<h2>
+    {{ category.category | upcase }}
+</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Example call</th>
+<th>Expected result</th>
+<th>Calculated result</th>
+</tr>
+</thead>
+<tbody>
+{% for function in category.functions %}
+<tr>
+    <td><code class="function-name">{{ function.title }}</code></td>
+<td>
+    <div class="clickable" role="button"><code onclick="document.getElementById('in').value = '{{ function.call | replace: "'", "&quot;"  }}'">{{ function.call }}</code></div></td>
+<td>
+    {{ function.result }}
+</td>
+<td>
+    <span id="{{ function.title }}"></span>
+</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endfor %}
+<script src="https://cdn.jsdelivr.net/npm/jstat@1.9.2/dist/jstat.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/gh/formulajs/formulajs@2.2.2/dist/formula.min.js"></script>
+<script>
+{% for category in site.data.functions %}
+{% for function in category.functions %}
+document.getElementById('{{ function.title }}').innerHTML = formulajs.{{ function.call }};
+{% endfor %}
+{% endfor %} 
+
+formulaKeys = Object.keys(formulajs);
+formulaKeys.forEach((key) => {window[key] =formulajs[key]; })
+</script>
