@@ -23,6 +23,9 @@ url: "https://formulajs.info"
 markdown: kramdown
 #theme: minima
 
+plugins:
+  - jekyll-sitemap
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
