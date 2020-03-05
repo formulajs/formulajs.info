@@ -36,7 +36,7 @@ You can review some usages and play online on the [functions pages](/functions).
 
 Considering the following spreadsheet:
 
-![Spreadsheet screenshot of a SUM function](/assets/img/spreadsheet-sum.png)
+{% include image.html url="/assets/img/spreadsheet-sum.png" description="Spreadsheet screenshot of a SUM function" %}
 
 The Formula.js equivalent would be:
 
