@@ -297,6 +297,9 @@
   - title: IF
     call: IF(true, 'Hello!', 'Goodbye!')
     result: 'Hello!'
+  - title: IFS
+    call: IFS(false, 'Hello!', true, 'Goodbye!')
+    result: 'Goodbye!'
   - title: IFERROR
     call: IFERROR('#DIV/0!', 'Error')
     result: 'Error'
@@ -309,6 +312,9 @@
   - title: OR
     call: OR(true, false, true)
     result: 'true'
+  - title: SWITCH
+    call: SWITCH(7, 9, 'Nine', 7, 'Seven')
+    result: 'Seven'
   - title: TRUE
     call: TRUE()
     result: 'true'

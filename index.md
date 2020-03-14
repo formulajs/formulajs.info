@@ -7,7 +7,7 @@ layout: home
 
 ### In browser
 
-Powered by [jsDelivr](https://www.jsdelivr.com/), you can use the latests version of Formula.js:
+Powered by [jsDelivr](https://www.jsdelivr.com/), you can use the latest version of Formula.js:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/jstat@1.9.2/dist/jstat.min.js"></script> 
@@ -16,14 +16,10 @@ Powered by [jsDelivr](https://www.jsdelivr.com/), you can use the latests versio
 
 ### In node
 
-The package is not yet pushed to NPM, but you can already install it like that in your package.json:
+Install the package:
 
 ```json
-{
-  "dependencies": {
-    "formulajs": "github:formulajs/formulajs#semver:^2.2.3",
-  },
-}
+npm i @formulajs/formulajs
 ```
 
 ## Play with it
@@ -58,3 +54,26 @@ differs from each other.
 For example `=2^3` is a valid Excel function that will return `8`. The `^` operator means something else in JavaScript 
 (`2^3` return `1`, you can learn more [here why](https://www.w3schools.com/js/js_bitwise.asp)). With Formula.js you
 can write `formulajs.POWER(2, 3)` which is equivalent to `Math.pow(2, 3)` in plain JavaScript.
+
+## Migration guide
+
+### From formulajs
+
+If you were previously using [formulajs from Sutoiku](https://www.npmjs.com/package/formulajs), some functions have been
+removed, due to dependency simplification.
+
+Text functions:
+
+`FIXED, TEXT, DOLLAR, VALUE`
+
+Math functions:
+
+`MDETERM, MINVERSE, MMULT, MUNIT`
+
+Otherwise the 2 packages are fully compatible. You can swap them.
+
+### From @handsontable/formulajs
+
+The code of this package is originally forked from [@handsontable/formulajs](https://github.com/handsontable/formula.js#readme)
+ version 2.0.2 (released in January 2020). The two packages were identical at the time. There is no regression, only 
+ fixes and new functions since the fork.
