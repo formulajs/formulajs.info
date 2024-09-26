@@ -873,6 +873,9 @@
   - title: TRIM
     call: TRIM(' First Quarter Earnings ')
     result: 'First Quarter Earnings'
+  - title: TEXTJOIN
+    call: TEXTJOIN(' ', true, 'The', '', 'sun', 'will', 'come', 'up', 'tomorrow.')
+    result: 'The sun will come up tomorrow.'
   - title: UNICHAR
     call: UNICHAR(66)
     result: 'B'
