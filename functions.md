@@ -9,7 +9,7 @@ navigation: main
 
 As of Tue, 13 May 2025 18:57:13 GMT
 
-Total: 515 functions | Implemented: 399 | Not Implemented: 116
+Total: 515 Excel functions, Implemented: 399, Not Implemented: 116
 
 | Function Name | Category | Description | Implemented |
 | :--- | :--- | :--- | :--- |
